@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="logo.jpeg" type="image/png" />
+    <title>Welcome,To your TasteTrails</title>
+    <!-- Google fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- aos cdn  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="logo.jpeg" class="logo" alt="logo" />
+        <ul class="links-container">
+          <li class="links"><a href="#">Menu</a></li>
+          <li class="links"><a href="#">Order</a></li>
+          <li class="links"><a href="#">Restraunts</a></li>
+          <li class="links"><a href="#">Track Order</a></li>
+        </ul>
+        <div class="nav-extras">
+          <!-- search box -->
+          <div class="search">
+            <input
+              type="text"
+              class="search-box"
+              placeholder="Search Restraunt,Cuisine....."
+            />
+            <button class="search-btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <!-- cart btn -->
+          <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+          <button id="change">
+            <a href="http://localhost:3000/logout" id="me">Logout</a>
+          </button>
+        </div>
+      </nav>
+
+      <!-- hero section -->
+      <main id="hero-section">
+        <!-- hero content -->
+        <div class="hero-content">
+          <h1 class="hero-heading">Eat the Best</h1>
+          <p class="hero-line">
+            Explore and understand the culture more by tasting the amazing
+            dishes of the culture
+          </p>
+          <div class="search location">
+            <input
+              type="text"
+              class="search-box"
+              placeholder="Search Restraunt,Cuisine....."
+            />
+            <button class="search-btn locate-btn">
+              <i class="fa-solid fa-location-crosshairs"></i>
+            </button>
+          </div>
+          <div class="hero-action-btn-container">
+            <button class="btn">Order Food</button>
+            <p class="or">or</p>
+            <button class="btn transparent">Make reservation</button>
+          </div>
+        </div>
+        <!-- hero-image-container -->
+        <div class="hero-image-container">
+          <div class="background-ele" data-aos="fade-in" data-aos-delay="700">
+            <div class="ellipse"></div>
+            <div class="ellipse"></div>
+            <div class="ellipse"></div>
+          </div>
+          <div class="foreground-elements">
+            <img
+              src="img/hero-thali.png"
+              data-aos="zoom-in"
+              data-aos-delay="0"
+              class="hero-img"
+              alt="thali"
+            />
+            <img
+              src="img/hero-chole.jpg"
+              data-aos="zoom-in"
+              data-aos-delay="150"
+              class="hero-img"
+              alt="chole"
+            />
+            <img
+              src="img/hero-pav.jpg"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+              class="hero-img"
+              alt="pav"
+            />
+
+            <div class="reveiw-box" data-aos="zoom-in" data-aos-delay="450">
+              <div
+                class="reviewer-info"
+                data-aos="zoom-out"
+                data-aos-delay="600"
+              >
+                <img src="img/user-1.png" class="reveiwer-img" alt="" />
+
+                <div class="reveiwer">
+                  <div class="reveiwer-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <p>4.5</p>
+                  </div>
+                  <h2 class="reveiwer-name">John</h2>
+                </div>
+              </div>
+              <div class="reveiw-body" data-aos="zoom-out" data-aos-delay="650">
+                <i class="fa-solid fa-quote-left"></i>
+                <p class="reveiw">
+                  This restaurant is a gem! The food was absolutely delicious,
+                  and the service was top-notch. It definitely lives up to its
+                  4.5-star rating. I highly recommend it!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </header>
+
+    <!-- restraunt-section  -->
+    <section class="restraunt-section">
+      <div class="leaf-layer right" data-aos="zoom-in-up">
+        <img src="img/leafs.png" alt="leaf" />
+      </div>
+
+      <div class="section">
+        <!-- food-image-container  -->
+        <div class="food-img-container">
+          <div class="circle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="circle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="food-img-animation-wrapper" data-aos="fade">
+            <img src="img/food-1.jpg" class="food-img" alt="food-img" />
+            <img src="img/food-2.jpg" class="food-img" alt="food-img" />
+            <img src="img/food-3.jpg" class="food-img" alt="food-img" />
+            <img src="img/food-4.jpg" class="food-img" alt="food-img" />
+            <img src="img/food-5.png" class="food-img" alt="food-img" />
+            <img src="img/food-6.png" class="food-img" alt="food-img" />
+            <img src="img/food-7.png" class="food-img" alt="food-img" />
+          </div>
+        </div>
+
+        <!-- section-content  -->
+        <div class="section-detail">
+          <span class="section-highlight"> From Professional chef </span>
+          <p class="section-title">1000+</p>
+          <div class="section-info">
+            Order from our 1000+ food and beverages
+          </div>
+          <button class="btn">Order food</button>
+        </div>
+      </div>
+
+      <div class="restraunts-container">
+        <div class="restraunt">
+          <p class="discount">50% off</p>
+          <div class="restraunt-thumbnail">
+            <img
+              src="img/restraunt-1.jpg"
+              class="restraunt-img"
+              alt="restraunt-img"
+            />
+          </div>
+          <div class="restraunt-body">
+            <h3 class="restraunt-name">Restraunt 01</h3>
+            <p class="menu">complete thali,sandwich</p>
+            <p class="place">new York</p>
+            <span class="rating">
+              4.2
+              <div class="reveiwer-rating">
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </span>
+          </div>
+        </div>
+        <div class="restraunt">
+          <!-- <p class="discount">50%</p> -->
+          <div class="restraunt-thumbnail">
+            <img
+              src="img/restraunt-2.jpg"
+              class="restraunt-img"
+              alt="restraunt-img"
+            />
+          </div>
+          <div class="restraunt-body">
+            <h3 class="restraunt-name">Restraunt 02</h3>
+            <p class="menu">complete thali,sandwich</p>
+            <p class="place">new York</p>
+            <span class="rating">
+              4.2
+              <div class="reveiwer-rating">
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </span>
+          </div>
+        </div>
+        <div class="restraunt">
+          <p class="discount">50%</p>
+          <div class="restraunt-thumbnail">
+            <img
+              src="img/restraunt-3.jpg"
+              class="restraunt-img"
+              alt="restraunt-img"
+            />
+          </div>
+          <div class="restraunt-body">
+            <h3 class="restraunt-name">Restraunt 03</h3>
+            <p class="menu">complete thali,sandwich</p>
+            <p class="place">new York</p>
+            <span class="rating">
+              4.2
+              <div class="reveiwer-rating">
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </span>
+          </div>
+        </div>
+        <div class="restraunt">
+          <!-- <p class="discount">50%</p> -->
+          <div class="restraunt-thumbnail">
+            <img
+              src="img/restraunt-4.jpg"
+              class="restraunt-img"
+              alt="restraunt-img"
+            />
+          </div>
+          <div class="restraunt-body">
+            <h3 class="restraunt-name">Restraunt 04</h3>
+            <p class="menu">complete thali,sandwich</p>
+            <p class="place">new York</p>
+            <span class="rating">
+              4.2
+              <div class="reveiwer-rating">
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </span>
+          </div>
+        </div>
+        <div class="restraunt">
+          <!-- <p class="discount">50%</p> -->
+          <div class="restraunt-thumbnail">
+            <img
+              src="img/restraunt-1.jpg"
+              class="restraunt-img"
+              alt="restraunt-img"
+            />
+          </div>
+          <div class="restraunt-body">
+            <h3 class="restraunt-name">Restraunt 05</h3>
+            <p class="menu">complete thali,sandwich</p>
+            <p class="place">new York</p>
+            <span class="rating">
+              4.2
+              <div class="reveiwer-rating">
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </span>
+          </div>
+        </div>
+        <div class="restraunt">
+          <p class="discount">50%</p>
+          <div class="restraunt-thumbnail">
+            <img
+              src="img/restraunt-6.jpg"
+              class="restraunt-img"
+              alt="restraunt-img"
+            />
+          </div>
+          <div class="restraunt-body">
+            <h3 class="restraunt-name">Restraunt 06</h3>
+            <p class="menu">complete thali,sandwich</p>
+            <p class="place">new York</p>
+            <span class="rating">
+              4.2
+              <div class="reveiwer-rating">
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="leaf-layer left">
+        <img src="img/leafs-left.png" alt="leaf" />
+      </div>
+    </section>
+
+    <!-- about-section -->
+    <section id="about-section">
+      <div class="about-us-review-container" data-aos="zoom-in-up">
+        <div class="circle"></div>
+        <img
+          src="img/pizza-pan.jpg"
+          alt="pizza-pan-img"
+          class="pizza-pan-img"
+        />
+        <div class="reviews-container">
+          <div class="review-wrapper" style="--aos-delay: 250ms">
+            <img src="img/user-5.png" class="reveiwer-img" alt="" />
+            <div class="reveiw-box">
+              <div class="reviewer-info">
+                <div class="reveiwer">
+                  <div class="reveiwer-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <p>4.5</p>
+                  </div>
+                  <h2 class="reveiwer-name">sara</h2>
+                </div>
+              </div>
+              <div class="reveiw-body">
+                <i class="fa-solid fa-quote-left"></i>
+                <p class="reveiw">
+                  This restaurant is a gem! The food was absolutely delicious,
+                  and the service was top-notch. It definitely lives up to its
+                  4.5-star rating. I highly recommend it!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="review-wrapper" style="--aos-delay: 3000ms">
+            <img src="img/user-4.png" class="reveiwer-img" alt="" />
+            <div class="reveiw-box">
+              <div class="reviewer-info">
+                <div class="reveiwer">
+                  <div class="reveiwer-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <p>4.5</p>
+                  </div>
+                  <h2 class="reveiwer-name">stephan</h2>
+                </div>
+              </div>
+              <div class="reveiw-body">
+                <i class="fa-solid fa-quote-left"></i>
+                <p class="reveiw">
+                  This restaurant is a gem! The food was absolutely delicious,
+                  and the service was top-notch. It definitely lives up to its
+                  4.5-star rating. I highly recommend it!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="review-wrapper" style="--aos-delay: 300ms">
+            <img src="img/user-3.png" class="reveiwer-img" alt="" />
+            <div class="reveiw-box">
+              <div class="reviewer-info">
+                <div class="reveiwer">
+                  <div class="reveiwer-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <p>4.5</p>
+                  </div>
+                  <h2 class="reveiwer-name">sara</h2>
+                </div>
+              </div>
+              <div class="reveiw-body">
+                <i class="fa-solid fa-quote-left"></i>
+                <p class="reveiw">
+                  This restaurant is a gem! The food was absolutely delicious,
+                  and the service was top-notch. It definitely lives up to its
+                  4.5-star rating. I highly recommend it!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="review-wrapper" style="--aos-delay: 4000ms">
+            <img src="img/user-2.png" class="reveiwer-img" alt="" />
+            <div class="reveiw-box">
+              <div class="reviewer-info">
+                <div class="reveiwer">
+                  <div class="reveiwer-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <p>4.5</p>
+                  </div>
+                  <h2 class="reveiwer-name">sara</h2>
+                </div>
+              </div>
+              <div class="reveiw-body">
+                <i class="fa-solid fa-quote-left"></i>
+                <p class="reveiw">
+                  This restaurant is a gem! The food was absolutely delicious,
+                  and the service was top-notch. It definitely lives up to its
+                  4.5-star rating. I highly recommend it!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="review-wrapper" style="--aos-delay: 450ms">
+            <img src="img/user-1.png" class="reveiwer-img" alt="" />
+            <div class="reveiw-box">
+              <div class="reviewer-info">
+                <div class="reveiwer">
+                  <div class="reveiwer-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <p>4.5</p>
+                  </div>
+                  <h2 class="reveiwer-name">sara</h2>
+                </div>
+              </div>
+              <div class="reveiw-body">
+                <i class="fa-solid fa-quote-left"></i>
+                <p class="reveiw">
+                  This restaurant is a gem! The food was absolutely delicious,
+                  and the service was top-notch. It definitely lives up to its
+                  4.5-star rating. I highly recommend it!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- about-services  -->
+      <div class="about">
+        <h2 class="about-title">why Us?</h2>
+        <p class="about-info">
+          We Serve as the best in taste.Our customer is number 1 priority.See
+          what others think about us
+        </p>
+        <div class="services-container">
+          <div class="service">
+            <div class="service-title">
+              <img
+                src="img/fastest-delivery.png"
+                class="service-img"
+                alt="service"
+              />
+              <h3 class="service-name">Fastest Delivery</h3>
+            </div>
+            <p class="service-detail">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo,
+              dolore natus nostrum error sit
+            </p>
+          </div>
+          <div class="service">
+            <div class="service-title">
+              <img
+                src="img/best-prices.png"
+                class="service-img"
+                alt="service"
+              />
+              <h3 class="service-name">Best-prices</h3>
+            </div>
+            <p class="service-detail">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo,
+              dolore natus nostrum error sit
+            </p>
+          </div>
+          <div class="service">
+            <div class="service-title">
+              <img
+                src="img/20+ restaurant.png"
+                class="service-img"
+                alt="service"
+              />
+              <h3 class="service-name">20+ Restaurants</h3>
+            </div>
+            <p class="service-detail">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo,
+              dolore natus nostrum error sit
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq-section">
+      <h1 class="section-title">Frequently Ask Questions</h1>
+
+      <div class="faq">
+        <div class="question-box">
+          <h3 class="question">How can i cancel my reservation?</h3>
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="answer-box">
+          <p class="answer">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et
+            augue turpis. Phasellus in dapibus tortor. Aenean quis nisl cursus,
+            condimentum diam a
+          </p>
+        </div>
+      </div>
+      <div class="faq">
+        <div class="question-box">
+          <h3 class="question">
+            How can I change delivery address after order placement ?
+          </h3>
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="answer-box">
+          <p class="answer">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et
+            augue turpis. Phasellus in dapibus tortor. Aenean quis nisl cursus,
+            condimentum diam a
+          </p>
+        </div>
+      </div>
+      <div class="faq">
+        <div class="question-box">
+          <h3 class="question">How can I contact my delivery person ?</h3>
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="answer-box">
+          <p class="answer">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et
+            augue turpis. Phasellus in dapibus tortor. Aenean quis nisl cursus,
+            condimentum diam a
+          </p>
+        </div>
+      </div>
+      <div class="faq">
+        <div class="question-box">
+          <h3 class="question">My payment is declining. What should I do ?</h3>
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="answer-box">
+          <p class="answer">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et
+            augue turpis. Phasellus in dapibus tortor. Aenean quis nisl cursus,
+            condimentum diam a
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- download app section -->
+    <section id="download-app-section">
+      <div class="section">
+        <div class="download-app-img-container">
+          <div class="pulse" data-aos="zoom-in-up">
+            <div class="circle pulse-animate"></div>
+            <div class="circle"></div>
+          </div>
+          <img
+            src="img/leafs.png"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+            class="leaf left"
+            alt="leaf"
+          />
+          <img
+            src="img/leafs-left.png"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+            class="leaf right"
+            alt="leaf"
+          />
+          <img
+            src="img/app1.PNG"
+            data-aos="phone-mockup-fade"
+            data-aos-delay="200"
+            class="phone-mockup"
+            alt="app"
+          />
+        </div>
+        <div class="section-detail">
+          <span class="section-highlight">
+            Download our app to stay updated
+          </span>
+          <p class="section-title">Make orders from your phone</p>
+          <div class="section-info">
+            Get extra feature on app including tracking order, managing account
+            and much more.
+          </div>
+          <div class="download-btn-group">
+            <a href="#" class="download-btn"
+              ><img src="img/play-store.png" alt="playtore"
+            /></a>
+            <a href="#" class="download-btn"
+              ><img src="img/app-store.png" alt="playtore"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- discount banner  -->
+    <div class="discount-banner">
+      <div class="section-detail">
+        <h1 class="section-title">Get an extra 20% off on your first order</h1>
+        <p class="section-info">Use this code during checkout</p>
+        <p class="discount-code">WELCOME 20</p>
+      </div>
+      <div class="dish-slide">
+        <img src="img/food-1.jpg" alt="food" />
+        <img src="img/food-4.jpg" alt="food" />
+        <img src="img/restraunt-4.jpg" alt="food" />
+      </div>
+    </div>
+
+    <section id="footer">
+      <div class="company-info">
+        <img src="logo.jpeg" class="logo" alt="logo" />
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-discord"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="download-btn-group">
+          <a href="#" class="download-btn"
+            ><img src="img/play-store.png" alt="playtore"
+          /></a>
+          <a href="#" class="download-btn"
+            ><img src="img/app-store.png" alt="playtore"
+          /></a>
+        </div>
+      </div>
+      <div class="useful-links footer-links-container">
+        <h5 class="footer-links-title">Useful Links</h5>
+        <a href="#" class="footer-links">Menu</a>
+        <a href="#" class="footer-links">Restaurants</a>
+        <a href="#" class="footer-links">Your Orders</a>
+        <a href="#" class="footer-links">Track Orders</a>
+        <a href="#" class="footer-links">Support</a>
+      </div>
+      <div class="information-links footer-links-container">
+        <h5 class="footer-links-title">information</h5>
+        <a href="#" class="footer-links">About Us</a>
+        <a href="#" class="footer-links">Privacy Policy</a>
+        <a href="#" class="footer-links">Terms & Conditions</a>
+        <a href="#" class="footer-links">What info we collect?</a>
+      </div>
+      <div class="contact-links footer-links-container">
+        <h5 class="footer-links-title">Contact Us</h5>
+        <p class="footer-text">
+          Our main restaurant is located on Street 231, NYC
+        </p>
+        <p class="footer-text">Phone - +00 1234567890</p>
+        <p class="footer-text">Email - help@logo.com</p>
+      </div>
+      <div class="payment-patners">
+        <img src="img/visa.png" alt="payment" />
+        <img src="img/master-card.png" alt="payment" />
+        <img src="img/paypal.png" alt="payment" />
+        <img src="img/stripe.png" alt="payment" />
+        <img src="img/apple-pay.png" alt="payment" />
+        <img src="img/google-pay.png" alt="payment" />
+      </div>
+      <p class="payment-patners-text">
+        Fully secured payment gateways by trusted companies
+      </p>
+      <!-- <p class="copyright">Designed & 👨‍💻 by Modern Web</p> -->
+    </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
